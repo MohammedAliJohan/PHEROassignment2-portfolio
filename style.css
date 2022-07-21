@@ -33,7 +33,7 @@ section{
 }
 .right-side{
     background-color: black;
-    height: 135px;
+    height: 160px;
     width: 175px;
     list-style: none;
     text-align: center;
@@ -53,4 +53,91 @@ section{
     background-color: white;
     padding: 7px 20px;
     border-radius: 4px;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.small{
+    background-color: rgba(186, 229, 255, 0.85);
+    color: black;
+    border-radius: 1px solid blue;
+    font-family: 'Ibarra Real Nova', serif;
+}
+.tran{
+    color: rgb(250, 246, 2);
+    text-decoration: none;
+    background: linear-gradient( rgb(243, 113, 98), rgb(211, 56, 118));
+    padding: 10px 25px;
+    border-radius: 3px;
+}
+.foo{
+    background-color: black;
+    display: block;
+    align-items: baseline;
+}
+#goal{
+    text-align: center;
+    color: white;
+}
+/*mobile view*/
+
+@media screen and (max-width:576px) {
+    
+    section{
+        display: inline;
+        width: 200px;
+    }
+    
+    .black{
+        margin-left: 50px;
+        width: 200px;
+        align-items: center;
+    }
+    .cup img{
+        width: 100px;
+        height: 200px;
+
+    }
+    .right-side{
+        display: flex;
+        align-items: center;
+        text-size-adjust: 5px;
+        background-color: white;
+        color: black;
+        width: 100px;
+        padding: 3px 10px;
+        border-radius: 5px;
+        margin-left: 30px;
+        
+    }
+    .redbutton .normal{
+
+    }
+    .container{
+        grid-template-columns: repeat(1,1fr);
+        width: 20px;
+        margin-left: 30px;
+
+    }
+    .foo{
+        align-items: center;
+        width: 500px;
+    }
+}
+/*tab view*/
+@media screen and (min-width:577px) and (max-width:992px) {
+    
+    .container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+}
+/*laptop view*/
+@media screen and (min-width:993px) and (max-width:1200px) {
+    
+    .container{
+        grid-template-columns: repeat(3,1fr);
+    }
+    
 }
